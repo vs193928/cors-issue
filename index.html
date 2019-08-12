@@ -1,9 +1,9 @@
-
-
 <html>
 <body>
-  <h1>this is forsy github project page</h1>
+  <h1> Demo for CORS Issue </h1>
+  <br><br>
 <button onClick="RunAPI()">Call API</button>
+<p id="demo"></p>
 </body>
 </html>
 <script>
@@ -15,8 +15,8 @@ request.send()
 
 request.onreadystatechange = (e) => {
   console.log(request.responseText)
+  document.getElementById("demo").innerHTML = request.responseText
 }
 }
 
 </script>
-
