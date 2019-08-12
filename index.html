@@ -1,1 +1,22 @@
-<h1>this is forsy github project page</h1>
+
+
+<html>
+<body>
+  <h1>this is forsy github project page</h1>
+<button onClick="RunAPI()">Call API</button>
+</body>
+</html>
+<script>
+function RunAPI(){
+var request = new XMLHttpRequest()
+request.open('GET','http://dw-cred-props.us-e2.cloudhub.io/props',true)
+//request.setRequestHeader("Origin","localhost")
+request.send()
+
+request.onreadystatechange = (e) => {
+  console.log(request.responseText)
+}
+}
+
+</script>
+
